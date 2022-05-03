@@ -23,6 +23,7 @@ import com.example.finnkino.model.Event.Director;
 import com.example.finnkino.model.Finnkino;
 import com.example.finnkino.model.Show;
 import com.example.finnkino.model.User;
+import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
 import java.time.format.DateTimeFormatter;
@@ -109,6 +110,7 @@ public class EventFragment extends Fragment {
                 List<String> userEventsList = currentUser.getUserEventsList();
                 userEventsList.add(currentEvent.getEventID());
                 currentUser.setUserEventsList(userEventsList);
+                FirebaseDatabase.getInstance().getReference().child("users").child(currentUser.getUserId()).child("userEventsList").setValue(userEventsList);
             }
         });
         return rootView;

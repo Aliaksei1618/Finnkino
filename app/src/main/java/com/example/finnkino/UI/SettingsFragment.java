@@ -25,6 +25,7 @@ import com.example.finnkino.model.Finnkino;
 import com.example.finnkino.model.Show;
 import com.example.finnkino.model.User;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -115,7 +116,7 @@ public class SettingsFragment extends Fragment {
         });
 
 
-    //    spinnerMyMovies.setOnClickListener(view -> flag2 = true);
+       // spinnerMyMovies.setOnClickListener(view -> flag2 = true);
     }
 
 
@@ -153,5 +154,8 @@ public class SettingsFragment extends Fragment {
         onHelperListener helperListener = (onHelperListener) context;
         helperListener.setSettingsFragment();
         currentUser.setLanguage(language);
+        FirebaseDatabase.getInstance().getReference().child("users").child(currentUser.getUserId()).child("language").setValue(language);
     }
+
+
 }

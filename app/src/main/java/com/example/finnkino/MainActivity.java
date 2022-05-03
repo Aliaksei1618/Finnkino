@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity implements onHelperListener 
 
         ImageView iv_toolbar_menu = findViewById(R.id.iv_toolbar_menu);
         iv_toolbar_menu.setOnClickListener(view -> setSettingsFragment());
-
+        ImageView toolbar_icon = findViewById(R.id.toolbar_icon);
+        toolbar_icon.setOnClickListener(view -> setSheduleFragment());
         setSheduleFragment();
     }
 
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements onHelperListener 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.setCustomAnimations(R.anim.slide_in, R.anim.fade_out, R.anim.fade_in, R.anim.slide_out);
         transaction.replace(R.id.fl_main, scheduleFragment);
-        transaction.addToBackStack(null);
+        transaction.addToBackStack("scheduleFragment");
         transaction.commit();
     }
 
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements onHelperListener 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.setCustomAnimations(R.anim.slide_in, R.anim.fade_out, R.anim.fade_in, R.anim.slide_out);
         transaction.replace(R.id.fl_main, eventFragment);
-        transaction.addToBackStack(null);
+        transaction.addToBackStack("eventFragment");
         transaction.commit();
         eventFragment.setCurrentShow(currentShow);
     }
@@ -66,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements onHelperListener 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.setCustomAnimations(R.anim.slide_in, R.anim.fade_out, R.anim.fade_in, R.anim.slide_out);
         transaction.replace(R.id.fl_main, settingsFragment);
-        transaction.addToBackStack(null);
+        transaction.addToBackStack("settingsFragment");
         transaction.commit();
     }
 }
