@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Toolbar"
+    android:id="@+id/toolbar">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+
+
+        <ImageView
+            android:id="@+id/toolbar_icon"
+            android:layout_width="61sp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_icon_foreground" />
+
+
+        <TextView
+            android:id="@+id/toolbar_text"
+            style="@style/Toolbar.Text"
+            android:layout_marginStart="0sp"
+            android:layout_toEndOf="@id/toolbar_icon"
+            android:text="@string/tool_bar_text" />
+
+
+        <ImageView
+            android:id="@+id/iv_toolbar_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16sp"
+            android:src="@drawable/ic_menu" />
+
+    </RelativeLayout>
+
+</Toolbar>

@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">Finnkino</string>
+    <string name="date_time_pattern">eee, dd.MM.yyyy</string>
+    <string name="locale_language">en</string>
+    <string name="locale_country">EN</string>
+    <string name="default_theater_name">Select an area/theater</string>
+
+    <!-- toolbar -->
+    <string name="tool_bar_text">FINNKINO</string>
+
+    <!-- shedule_item -->
+    <string name="tv_title">Title</string>
+    <string name="tv_theatre_and_auditorium">Theatre and auditorium</string>
+    <string name="tv_rating">Rating</string>
+    <string name="tv_spoken_language_iso">Language</string>
+    <string name="tv_presentation_method">Presentation method</string>
+    <string name="tv_dttm_show_start">Time</string>
+    <string name="iv_small_image_portrait">Image</string>
+
+    <!-- fragment_event -->
+    <string name="iv_landscape_image">Landscape</string>
+    <string name="tv_dttm_start">Show start</string>
+    <string name="tv_spoken_language">Spoken Language</string>
+    <string name="tv_subtitle_languages">Subtitle Languages</string>
+    <string name="tv_subtitle_language1">Subtitle Language1</string>
+    <string name="tv_subtitle_language2">Subtitle Language2</string>
+    <string name="tv_imdb_rating">IMDB rating</string>
+    <string name="tv_event_title">Title</string>
+    <string name="tv_original_title">Original title</string>
+    <string name="bt_book">Book</string>
+    <string name="bt_buy">Buy</string>
+    <string name="tv_production_year">Production year</string>
+    <string name="tv_length_in_minutes">Length</string>
+    <string name="iv_rating_image">Rating</string>
+    <string name="rv_content_descriptors">Content descriptors</string>
+    <string name="tv_event_type">Type</string>
+    <string name="tv_genres">Genres</string>
+    <string name="tv_directors">Directors</string>
+    <string name="tv_cast">Cast</string>
+    <string name="sv_synopsis">Synopsis</string>
+    <string name="tv_synopsis">Synopsis</string>
+    <string name="tv_minute">\ min</string>
+
+    <!-- fragment_settings -->
+    <string name="tv_user_name">User name</string>
+    <string name="sw_theme">Dark theme</string>
+    <string name="tv_my_movies">My movies</string>
+    <string-array name="languages">
+        <item>english</item>
+        <item>suomi</item>
+    </string-array>
+
+    <!-- activity_login -->
+    <string name="et_email">E-mail</string>
+    <string name="et_password">Password</string>
+    <string name="bt_sign_in">Sign in</string>
+    <string name="bt_register">Register</string>
+    <string name="successful_login">Completed!</string>
+    <string name="unsuccessful_login">Username or password error.</string>
+    <string name="successful_registration">Registered!</string>
+    <string name="unsuccessful_registration">Failure. Try again.</string>
+</resources>

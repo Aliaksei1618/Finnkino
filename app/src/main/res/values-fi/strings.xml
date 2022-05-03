@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Finnkino</string>
+    <string name="date_time_pattern">eee, dd.MM.yyyy</string>
+    <string name="locale_language">fi</string>
+    <string name="locale_country">FI</string>
+    <string name="default_theater_name">Valitse alue/teatteri</string>
+
+    <!-- toolbar -->
+    <string name="tool_bar_text">FINNKINO</string>
+
+    <!-- shedule_item -->
+    <string name="tv_title">Nimi</string>
+    <string name="tv_theatre_and_auditorium">Teatteri ja auditorio</string>
+    <string name="tv_rating">Luokitus</string>
+    <string name="tv_spoken_language_iso">Kieli</string>
+    <string name="tv_presentation_method">Esitysmenetelmä</string>
+    <string name="tv_dttm_show_start">Aika</string>
+    <string name="iv_small_image_portrait">Kuva</string>
+
+    <!-- fragment_event -->
+    <string name="iv_landscape_image">Maisema</string>
+    <string name="tv_dttm_start">Esityksen alku</string>
+    <string name="tv_spoken_language">Puhuttu kieli</string>
+    <string name="tv_subtitle_languages">Tekstityskielet</string>
+    <string name="tv_subtitle_language1">Tekstityskieli1</string>
+    <string name="tv_subtitle_language2">Tekstityskieli2</string>
+    <string name="tv_imdb_rating">IMDB luokitus</string>
+    <string name="tv_event_title">Nimi</string>
+    <string name="tv_original_title">Alkuperäinen nimi</string>
+    <string name="bt_book">Kirja</string>
+    <string name="bt_buy">Ostaa</string>
+    <string name="tv_production_year">Tuotantovuosi</string>
+    <string name="tv_length_in_minutes">Pituus</string>
+    <string name="iv_rating_image">Luokitus</string>
+    <string name="rv_content_descriptors">Sisältökuvaajat</string>
+    <string name="tv_event_type">Tyyppi</string>
+    <string name="tv_genres">Genret</string>
+    <string name="tv_directors">Ohjaajat</string>
+    <string name="tv_cast">Heittää</string>
+    <string name="sv_synopsis">Tiivistelmä</string>
+    <string name="tv_synopsis">Tiivistelmä</string>
+    <string name="tv_minute">\ min</string>
+
+    <!-- fragment_settings -->
+    <string name="tv_user_name">Käyttäjänimi</string>
+    <string name="sw_theme">Tumma teema</string>
+    <string name="tv_my_movies">Minun elokuvani</string>
+    <string-array name="languages">
+        <item>suomi</item>
+        <item>english</item>
+    </string-array>
+
+    <!-- activity_login -->
+    <string name="et_email">Sähköposti</string>
+    <string name="et_password">Salasana</string>
+    <string name="bt_sign_in">Sisään</string>
+    <string name="bt_register">Rekisteröidy</string>
+    <string name="successful_login">Valmis!</string>
+    <string name="unsuccessful_login">Käyttäjätunnus tai salasana virhe.</string>
+    <string name="successful_registration">Rekisteröity!</string>
+    <string name="unsuccessful_registration">Epäonnistuminen. Yritä uudelleen.</string>
+
+
+</resources>

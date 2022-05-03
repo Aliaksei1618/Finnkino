@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "87362722799",
+    "project_id": "cloudtasks-33db8",
+    "storage_bucket": "cloudtasks-33db8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:87362722799:android:638d5973308ca9e18cf41a",
+        "android_client_info": {
+          "package_name": "com.example.finnkino"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "87362722799-ejq6s27lgrkb8kg1ktgo8ea9q1gbhr0p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0lZjBP2GtM_gMCzS2-4wTZbXtouT8iZc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "87362722799-ejq6s27lgrkb8kg1ktgo8ea9q1gbhr0p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.EventFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_large_image_landscape"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:contentDescription="@string/iv_landscape_image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_cinema_icon"
+                    android:transitionName="animation_transition" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:text="@string/tv_event_title"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tv_original_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="@string/tv_original_title"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_dttm_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="3dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:text="@string/tv_dttm_start"
+                        android:textColor="@color/yellow"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_theatre_auditorium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center"
+                        android:text="@string/tv_theatre_and_auditorium"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/bt_buy"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/bt_buy" />
+
+                        <Button
+                            android:id="@+id/bt_book"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:text="@string/bt_book" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RatingBar
+                            android:id="@+id/rb_my_rating"
+                            style="?android:attr/ratingBarStyleIndicator"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="3"
+                            android:numStars="5"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/iv_imdb_rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="@string/tv_imdb_rating"
+                            android:src="@drawable/ic_imdb_logo" />
+
+                        <TextView
+                            android:id="@+id/tv_imdb_rating"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="center_horizontal"
+                            android:textSize="24sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/iv_rating_image"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/iv_rating_image"
+                            android:scaleType="fitEnd"
+                            android:src="@drawable/ic_cinema_icon" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_content_descriptors"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:foregroundGravity="left">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tv_spoken_language_inscription"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="@string/tv_spoken_language"
+                            android:textColor="@color/yellow"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tv_subtitle_languages_inscription"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="@string/tv_subtitle_languages"
+                            android:textColor="@color/yellow"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tv_spoken_language"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/tv_spoken_language"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tv_subtitle_language1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/tv_subtitle_language1"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tv_subtitle_language2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:fontFamily="@font/roboto"
+                            android:text="@string/tv_subtitle_language2"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="start|center_vertical"
+                            android:text="@string/tv_event_type"
+                            android:textColor="@color/yellow"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="start|center_vertical"
+                            android:text="@string/tv_genres"
+                            android:textColor="@color/yellow"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_type"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:text="@string/tv_event_type"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tv_genres"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:text="@string/tv_genres"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="start|center_vertical"
+                            android:text="@string/tv_production_year"
+                            android:textColor="@color/yellow"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="start|center_vertical"
+                            android:text="@string/tv_length_in_minutes"
+                            android:textColor="@color/yellow"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_production_year"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:text="@string/tv_production_year"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tv_length_in_minutes"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:text="@string/tv_length_in_minutes"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_directors"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="start|center_vertical"
+                            android:text="@string/tv_directors"
+                            android:textColor="@color/yellow"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tv_cast"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="start|center_vertical"
+                            android:text="@string/tv_cast"
+                            android:textColor="@color/yellow"
+                            android:textSize="20sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_director_list"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:text="@string/tv_directors"
+                            android:textSize="20sp" />
+
+
+                        <TextView
+                            android:id="@+id/tv_actor_list"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical"
+                            android:text="@string/tv_cast"
+                            android:textSize="20sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_synopsis_inscription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="@string/tv_synopsis"
+                            android:textColor="@color/yellow"
+                            android:textSize="20sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tv_synopsis"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tv_synopsis"
+                            android:textSize="20sp" />
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
